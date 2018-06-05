@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server-start": "browser-sync start --server --files \"public/assets/css/*.css, public/assets/scss/*.scss, *.html\"",
+    "watch-sass": "nodemon -e scss -x \"npm run compile-sass\"",
+    "compile-sass": "node-sass --include-path scss public/assets/scss/main.scss public/assets/css/main.min.css --output-style compressed",
+    "ftp-deploy": "node ftp-deploy"
+  },
+  "author": "Daniel Fernandez Rabal",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "ftp-deploy": "^2.1.1",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5"
+  }
+}
