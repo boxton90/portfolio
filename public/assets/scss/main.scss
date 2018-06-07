@@ -9,7 +9,11 @@ $yellow: #ffdd57;
 
 body{
 	font-family: $primary-font-family;
-	letter-spacing: 1px;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+a{
+    color: $dark-yellow;
 }
 header{
 	background-image: url(../img/bg.jpg);
@@ -24,6 +28,29 @@ header{
     }
     .subtitle{
         font-size: 3rem;
+    }
+    i{
+        color: $dark-yellow;
+        padding: 1rem;
+        position: fixed;
+        z-index: 1;
+        right: 0;
+    }
+    nav{
+        &.nav-container{
+            position: fixed;
+            right: 0;
+            z-index: 1;
+            background-color: white;
+            min-width: 0vw;
+            width: 0vw;
+            padding: 0;
+            transition: all .3s;
+        }
+        &.opened{
+            min-width: 100vw;
+            z-index: 5;    
+        }
     }
 }
 .footer{
